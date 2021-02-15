@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ContactSchedulesReport">
+   <children>
+      <ComboBox fx:id="contactComboBox" layoutX="14.0" layoutY="74.0" onAction="#onActionDisplaySchedule" prefWidth="150.0" />
+      <Label layoutX="207.0" layoutY="14.0" text="CONTACT SCHEDULES" underline="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="50.0" text="Select Contact" underline="true" />
+      <TableView fx:id="contactAptTableView" layoutX="14.0" layoutY="108.0" prefHeight="400.0" prefWidth="769.0">
+        <columns>
+          <TableColumn fx:id="appointmentID" prefWidth="110.0" text="ID" />
+          <TableColumn fx:id="aptTitleTableView" prefWidth="110.0" text="Title" />
+            <TableColumn fx:id="aptTypeTableColumn" prefWidth="110.0" text="Type" />
+            <TableColumn fx:id="aptDescriptionTableColumn" prefWidth="110.0" text="Description" />
+            <TableColumn fx:id="aptStartTableColumn" prefWidth="110.0" text="Start" />
+            <TableColumn fx:id="aptEndTableColumn" prefWidth="110.0" text="End" />
+            <TableColumn fx:id="aptCustomerIDTableColumn" prefWidth="110.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="736.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionExitApp" text="EXIT" />
+      <Button fx:id="mainButton" layoutX="593.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionSceneMain" text="MAIN" />
+      <Button fx:id="logoutButton" layoutX="652.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionSceneLogout" prefHeight="27.0" prefWidth="74.0" text="LOGOUT" />
+   </children>
+</AnchorPane>
