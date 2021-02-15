@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditCustomer">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="14.0" prefHeight="29.0" prefWidth="237.0" text="EDIT CUSTOMER" underline="true">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="563.0" layoutY="324.0" mnemonicParsing="false" onAction="#onActionExitApp" text="EXIT" />
+        <Button fx:id="addCustomerButton" layoutX="458.0" layoutY="275.0" mnemonicParsing="false" onAction="#onActionEditCustomer" text="SAVE AND CONTINUE" />
+        <TextField fx:id="customerIDTextField" disable="true" layoutX="139.0" layoutY="61.0" />
+        <TextField fx:id="customerNameTextField" layoutX="139.0" layoutY="101.0" />
+        <TextField fx:id="customerAddressTextField" layoutX="139.0" layoutY="138.0" />
+        <TextField fx:id="customerPostalTextField" layoutX="139.0" layoutY="175.0" />
+        <Label layoutX="14.0" layoutY="66.0" text="Customer ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="106.0" text="Customer Name">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="143.0" text="Address">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="179.0" text="Postal Code">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="customerPhoneTextField" layoutX="137.0" layoutY="214.0" />
+        <Label layoutX="14.0" layoutY="219.0" text="Phone Number">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TextField fx:id="dateCreatedTextField" layoutX="441.0" layoutY="58.0" />
+      <TextField fx:id="createdByTextField" layoutX="441.0" layoutY="98.0" />
+      <TextField fx:id="lastUpdateTextField" layoutX="441.0" layoutY="138.0" />
+      <TextField fx:id="lastUpdatedByTextField" layoutX="441.0" layoutY="184.0" />
+      <Label layoutX="316.0" layoutY="63.0" text="Create Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="103.0" text="Created By">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="143.0" text="Last Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="188.0" text="Last Updated By">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="266.0" text="Country">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countryComboBox" layoutX="137.0" layoutY="262.0" onAction="#onActionSetDivisionID" onMouseClicked="#onActionSetDivisionID" prefHeight="27.0" prefWidth="167.0" />
+      <Label layoutX="316.0" layoutY="228.0" text="Division ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="divisionIDComboBox" layoutX="441.0" layoutY="224.0" prefHeight="27.0" prefWidth="167.0" />
+      <Button fx:id="logoutButton" layoutX="479.0" layoutY="324.0" mnemonicParsing="false" onAction="#onActionSceneLogout" text="LOGOUT" />
+      <Button fx:id="backButton" layoutX="408.0" layoutY="324.0" mnemonicParsing="false" onAction="#onActionSceneCustomerMain" text="BACK" />
+    </children>
+</AnchorPane>

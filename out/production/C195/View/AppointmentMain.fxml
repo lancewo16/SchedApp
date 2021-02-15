@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentMain">
+    <children>
+        <Label alignment="CENTER" layoutX="244.0" prefHeight="57.0" prefWidth="316.0" text="APPOINTMENTS" textAlignment="CENTER" underline="true">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="aptTableView" layoutX="25.0" layoutY="78.0" prefHeight="400.0" prefWidth="1100.0">
+            <columns>
+                <TableColumn fx:id="aptIDTableColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="aptTitleTableColumn" prefWidth="50.0" text="Title" />
+                <TableColumn fx:id="aptDescriptionTableColumn" prefWidth="77.0" text="Description" />
+            <TableColumn fx:id="aptLocationTableColumn" prefWidth="77.0" text="Location" />
+            <TableColumn fx:id="aptTypeTableColumn" prefWidth="50.0" text="Type" />
+            <TableColumn fx:id="aptStartTableColumn" prefWidth="92.0" text="Start Time" />
+            <TableColumn fx:id="aptEndTableColumn" prefWidth="92.0" text="End Time" />
+            <TableColumn fx:id="aptCreateDateTableColumn" prefWidth="92.0" text="Created Date" />
+            <TableColumn fx:id="aptCreatedByTableColumn" prefWidth="75.0" text="Created By" />
+            <TableColumn fx:id="aptLastUpdateTableColumn" prefWidth="85.0" text="Last Update" />
+            <TableColumn fx:id="aptLastUpdatedByTableColumn" prefWidth="90.0" text="Updated By" />
+            <TableColumn fx:id="aptCIDTableColumn" prefWidth="85.0" text="Customer ID" />
+            <TableColumn fx:id="aptUIDTableColumn" prefWidth="75.0" text="User ID" />
+            <TableColumn fx:id="aptContactIDTableColumn" prefWidth="84.0" text="Contact ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="addAptButton" layoutX="879.0" layoutY="486.0" mnemonicParsing="false" onAction="#onActionSceneAddApt" prefHeight="27.0" prefWidth="73.0" text="ADD" />
+        <Button fx:id="editAptButton" layoutX="965.0" layoutY="486.0" mnemonicParsing="false" onAction="#onActionSceneEditApt" prefHeight="27.0" prefWidth="73.0" text="EDIT" />
+        <Button fx:id="deleteAptButton" layoutX="1052.0" layoutY="486.0" mnemonicParsing="false" onAction="#onActionSceneDeleteApt" prefHeight="27.0" prefWidth="73.0" text="DELETE" />
+        <Button fx:id="menuButton" layoutX="879.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionSceneMain" prefHeight="27.0" prefWidth="73.0" text="MAIN" />
+        <Button fx:id="exitButton" layoutX="1051.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionExitApp" prefHeight="27.0" prefWidth="73.0" text="EXIT" />
+      <RadioButton fx:id="allAptsRadio" layoutX="233.0" layoutY="48.0" mnemonicParsing="false" onAction="#onActionAllAptsRadio" text="All Appointments">
+         <toggleGroup>
+            <ToggleGroup fx:id="aptTableToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weeklyRB" layoutX="381.0" layoutY="48.0" mnemonicParsing="false" onAction="#onActionWeeklyAptsRadio" text="Weekly" toggleGroup="$aptTableToggle" />
+      <RadioButton fx:id="monthlyRB" layoutX="476.0" layoutY="48.0" mnemonicParsing="false" onAction="#onActionMonthlyAptsRadio" text="Monthly" toggleGroup="$aptTableToggle" />
+      <Button fx:id="logoutButton" layoutX="964.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionSceneLogout" prefHeight="27.0" prefWidth="76.0" text="LOGOUT" />
+      <Label alignment="CENTER" layoutX="104.0" layoutY="44.0" prefHeight="27.0" prefWidth="129.0" text="FILTER BY:" textAlignment="CENTER" />
+    </children>
+</AnchorPane>

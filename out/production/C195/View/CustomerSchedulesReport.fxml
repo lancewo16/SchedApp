@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerSchedulesReport">
+    <children>
+        <ComboBox fx:id="customerComboBox" layoutX="28.0" layoutY="71.0" onAction="#onActionDisplaySchedule" prefHeight="27.0" prefWidth="197.0" />
+        <Label layoutX="325.0" layoutY="14.0" text="CUSTOMER SCHEDULES REPORT" underline="true">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="47.0" text="Select Customer" underline="true" />
+        <TableView fx:id="customerAptTableView" layoutX="14.0" layoutY="108.0" prefHeight="400.0" prefWidth="850.0">
+            <columns>
+                <TableColumn fx:id="appointmentID" prefWidth="70.0" text="ID" />
+                <TableColumn fx:id="aptTitleTableColumn" prefWidth="120.0" text="Title" />
+                <TableColumn fx:id="aptTypeTableColumn" prefWidth="120.0" text="Type" />
+                <TableColumn fx:id="aptDescriptionTableColumn" prefWidth="140.0" text="Description" />
+                <TableColumn fx:id="aptStartTableColumn" prefWidth="140.0" text="Start" />
+                <TableColumn fx:id="aptEndTableColumn" prefWidth="140.0" text="End" />
+                <TableColumn fx:id="aptCustomerIDTableColumn" prefWidth="120.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="exitButton" layoutX="817.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionExitApp" text="EXIT" />
+        <Button fx:id="mainButton" layoutX="676.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionSceneMain" text="MAIN" />
+      <Button fx:id="logoutButton" layoutX="735.0" layoutY="515.0" mnemonicParsing="false" onAction="#onActionSceneLogout" text="LOGOUT" />
+    </children>
+</AnchorPane>
